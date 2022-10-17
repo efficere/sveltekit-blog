@@ -2,7 +2,27 @@
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'etelkaTextPro': 'Etelka Text Pro',
+        'poppins': 'Poppins'
+      },
+      colors:{
+        'azul': {
+          1: '#00A3D1',
+          2: '#31577C',
+          3: '#0D81AA'
+        },
+        'vermelho':{
+          1: '#BA3345',
+          2: '#ED3047',
+        }
+
+      }
+    },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui:{
+    themes: false,
+  },
 }

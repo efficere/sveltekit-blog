@@ -1,1 +1,5 @@
-<h1 class="text-xl md:text-3xl">Página em manutenção</h1>
+<div class="bg-slate-100">
+    <div class="container mx-auto h-screen w-screen flex items-center justify-center">
+        <img src="/img/logo-efficere.webp" alt="">
+    </div>
+</div>

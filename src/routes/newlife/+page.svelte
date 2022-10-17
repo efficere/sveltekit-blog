@@ -4,6 +4,7 @@
 	let ativo = false;
 </script>
 <svelte:head>
+	<title>Base de clientes - New Life Fibra</title>
 	<link rel="shortcut icon" href="/img/favicon.webp" type="image/x-icon">
 </svelte:head>
 <div class="container mx-auto px-5 md:p-0 flex items-center justify-center h-screen w-screen">

@@ -13,21 +13,21 @@
 	<link rel="shortcut icon" href="/img/favicon.webp" type="image/x-icon">
 </svelte:head>
 
-<div class="container mx-auto px-5 md:p-0 flex items-center justify-center h-screen w-screen">
+<div class="container mx-auto px-5 md:p-0 gap-5 flex flex-col items-center justify-center h-screen w-screen">
 	<form method="POST" class="flex flex-col gap-10 min-h-[20rem] min-w-[20rem] w-full max-w-[35rem] shadow-xl shadow-black/10 rounded-3xl p-10 items-center justify-center border-t-4 border-red-500">
-		<div class="flex flex-col items-center justify-center">
+		<div class="flex flex-col gap-10 items-center justify-center">
 			<img src="/img/logo-azul.webp" class="max-w-[12.5rem]" alt="">
 			<div class="leading-snug flex flex-col gap-2">
 				<h1 class="text-center text-xl md:text-2xl lg:text-3xl font-etelkaTextPro font-bold">Base de clientes</h1>
 				<p class="text-justify">Consulte nossa base de dados e ofereça descontos aos clientes New Life Fibra.</p>
 			</div>
 		</div>
-		<div class="flex flex-col items-center gap-10 w-full">
+		<div class="flex flex-col items-center gap-5 w-full">
 			<fieldset class="flex flex-col gap-2 w-full">
 				<label for="cpf" class="w-full text-center leading-snug md:leading-normal md:text-left font-bold md:text-lg">CPF {'('}somente números, sem pontuação{')'}</label>
 				<input type="text" id="cpf" name="cpf" placeholder="Digite o CPF somente números..." class="w-full p-2 rounded-lg border border-black/20" required pattern="^[0-9]{'{11}'}$" maxlength="11">
 			</fieldset>
-			<button type="submit" class="btn btn-primary w-2/4 bg-azul-2 border-azul-3 hover:bg-azul-1 hover:border-azul-3">Conferir</button>
+			<button type="submit" class="btn btn-primary w-2/4 bg-azul-2 border-azul-3 hover:bg-azul-1 hover:border-azul-3 rounded-full">Conferir</button>
 		</div>
 		<div class="h-full max-h-[2rem]">
 			{#if form?.nome && !form?.erro}
@@ -37,8 +37,19 @@
 			{/if}
 		</div>
 		<p class="text-center">Obrigado por fazer parte da nossa história! :{')'}</p>
-
+		
 	</form>
+	<div class="flex gap-2 w-full justify-center items-center">
+		<div class="flex flex-col gap-2 items-center">
+			<p class="text-xs uppercase tracking-wider">Tecnologias</p>
+			<div class="flex gap-5 items-center">
+				<a href="https://jamstack.org/" class="w-[1.5rem]"><img src="/img/logo-jamstack.svg" alt=""></a>
+				<a href="https://pages.cloudflare.com/" class="w-[1.3rem]"><img src="/img/logo-cloudflare_pages.svg" alt=""></a>
+				<a href="https://www.cloudflare.com/pt-br/" class="w-[2rem]"><img src="/img/logo-cloudflare.svg" alt=""></a>
+				<a href="https://kit.svelte.dev/" class="w-[1rem]"><img src="/img/logo-svelte.svg" alt=""></a>
+			</div>
+		</div>
+	</div>
 </div>
 
 <style>

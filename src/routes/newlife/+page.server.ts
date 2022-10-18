@@ -12,9 +12,6 @@ export const actions: import('./$types').Actions = {
         }else{
             doc = "erro";
         }
-
-        console.log(doc);
-        // pega o token
         const getToken = async () => {
             const tokenRes = await fetch(`https://sac.newlifefibra.com.br/mk/WSAutenticacao.rule?sys=MK0&token=004e1e43eeabb77526992637db07635a&password=3687777e73e3415&cd_servico=9999`);
             const tokenData = await tokenRes.json();

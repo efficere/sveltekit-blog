@@ -1,12 +1,13 @@
 <script>
 	/** @type {import('./$types').ActionData} */
 	export let form;
-	let ativo = false;
+	console.log(form);
 </script>
 <svelte:head>
 	<title>Base de clientes - New Life Fibra</title>
 	<link rel="shortcut icon" href="/img/favicon.webp" type="image/x-icon">
 </svelte:head>
+
 <div class="container mx-auto px-5 md:p-0 flex items-center justify-center h-screen w-screen">
 	<form method="POST" class="flex flex-col gap-10 min-h-[20rem] min-w-[20rem] w-full max-w-[35rem] shadow-xl shadow-black/10 rounded-3xl p-10 items-center justify-center border-t-4 border-red-500">
 		<div class="flex flex-col items-center justify-center">
@@ -25,9 +26,9 @@
 		</div>
 		<div class="h-full max-h-[2rem]">
 			{#if form?.clientData && !form?.erro}
-				<p class="text-green-500"><span class="font-bold">{form?.clientData[0].Nome}</span> é cliente ativo New Life Fibra!</p>
+				<p class="text-green-500 text-center"><span class="font-bold">{form?.clientData[0].Nome}</span> é cliente ativo New Life Fibra!</p>
 			{:else if form?.erro}
-				<p class="text-red-500">CPF não encontrado em nossa base de dados</p>
+				<p class="text-red-500 text-center">CPF não encontrado em nossa base de dados</p>
 			{/if}
 		</div>
 		<p class="text-center">Obrigado por fazer parte da nossa história! :{')'}</p>

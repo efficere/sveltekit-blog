@@ -1,7 +1,18 @@
 <script>
+	/*
+		SISTEMA PARA CONSULTA DE CLIENTES ATIVOS v0.0.1
+		- Consulta somente clientes ativos, de acordo com dados disponibilizados pela API oficial do MK.
+
+	*/
 	/** @type {import('./$types').ActionData} */
 	export let form;
-	console.log(form);
+	let nomes = "";
+	let firstName = "";
+	if(form?.clientData && !form?.erro){
+		let fullName = form?.clientData[0].Nome;
+		nomes = fullName.split(' ');
+		firstName = nomes[0];
+	}
 </script>
 <svelte:head>
 	<title>Base de clientes - New Life Fibra</title>
@@ -26,9 +37,9 @@
 		</div>
 		<div class="h-full max-h-[2rem]">
 			{#if form?.clientData && !form?.erro}
-				<p class="text-green-500 text-center"><span class="font-bold">{form?.clientData[0].Nome}</span> é cliente ativo New Life Fibra!</p>
+				<p class="text-green-500 text-center"><span class="font-bold">{firstName}</span> é cliente ativo New Life Fibra!</p>
 			{:else if form?.erro}
-				<p class="text-red-500 text-center">CPF não encontrado em nossa base de dados</p>
+				<p class="text-red-500 text-center"><span class="font-bold">CPF não encontrado</span> em nossa base de dados</p>
 			{/if}
 		</div>
 		<p class="text-center">Obrigado por fazer parte da nossa história! :{')'}</p>

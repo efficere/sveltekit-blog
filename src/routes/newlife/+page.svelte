@@ -12,9 +12,8 @@
 	<title>Base de clientes - New Life Fibra</title>
 	<link rel="shortcut icon" href="/img/favicon.webp" type="image/x-icon">
 </svelte:head>
-
-<div class="container mx-auto px-5 md:p-0 gap-5 flex flex-col items-center justify-center h-screen w-screen">
-	<form method="POST" class="flex flex-col gap-10 min-h-[20rem] min-w-[20rem] w-full max-w-[35rem] shadow-xl shadow-black/10 rounded-3xl p-10 items-center justify-center border-t-4 border-red-500">
+<div class="container mx-auto px-5 md:p-0 gap-5 flex flex-col items-center justify-center min-h-[48rem] h-screen w-screen">
+	<form method="POST" class="flex flex-col gap-10 min-h-[40.9375rem] min-w-[20rem] w-full max-w-[32rem] shadow-xl shadow-black/10 rounded-3xl p-5 sm:p-10 items-center justify-center border-t-4 border-red-500">
 		<div class="flex flex-col gap-10 items-center justify-center">
 			<img src="/img/logo-azul.webp" class="max-w-[12.5rem]" alt="">
 			<div class="leading-snug flex flex-col gap-2">
@@ -22,7 +21,7 @@
 				<p class="text-justify">Consulte nossa base de dados e ofereça descontos aos clientes New Life Fibra.</p>
 			</div>
 		</div>
-		<div class="flex flex-col items-center gap-5 w-full">
+		<div class="flex flex-col items-center gap-7 w-full">
 			<fieldset class="flex flex-col gap-2 w-full">
 				<label for="cpf" class="w-full text-center leading-snug md:leading-normal md:text-left font-bold md:text-lg">CPF {'('}somente números, sem pontuação{')'}</label>
 				<input type="text" id="cpf" name="cpf" placeholder="Digite o CPF somente números..." class="w-full p-2 rounded-lg border border-black/20" required pattern="^[0-9]{'{11}'}$" maxlength="11">

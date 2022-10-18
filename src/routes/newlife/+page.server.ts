@@ -7,13 +7,13 @@ export const actions: import('./$types').Actions = {
         const formData = await request.formData();
         const cpf = formData.get('cpf');
 
-        // // trata o número informado (caso menor que 999, passa um valor não esperado no endpoint, o que retorna em erro)
-        // let doc: FormDataEntryValue | null;
-        // if(Number(cpf) > 999){
-        //     doc = cpf;
-        // }else{
-        //     doc = "erro";
-        // }
+        // trata o número informado (caso menor que 1000 ou igual a 99999999999, passa um valor não esperado no endpoint, o que retorna em erro)
+        let doc: FormDataEntryValue | null;
+        if(Number(cpf) === 99999999999 || Number(cpf) < 1000){
+            doc = "erro";
+        }else{
+            doc = cpf;
+        }
 
         // fetch token
         const getToken = async () => {
@@ -25,7 +25,7 @@ export const actions: import('./$types').Actions = {
         // passa o token para a variável
         const token = await getToken();
         // fetch API (endpoint lista clientes: https://documentacao.mksolutions.com.br/display/MK30/APIs+gerais#APIsgerais-LISTARCLIENTES)
-        const clientRes = await fetch(`https://sac.newlifefibra.com.br/mk/WSMKConsultaClientes.rule?sys=MK0&token=${token}&doc=${cpf}`);
+        const clientRes = await fetch(`https://sac.newlifefibra.com.br/mk/WSMKConsultaClientes.rule?sys=MK0&token=${token}&doc=${doc}`);
         const clientData = await clientRes.json();
 
         /* 

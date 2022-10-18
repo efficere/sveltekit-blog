@@ -3,8 +3,6 @@
 		SISTEMA PARA CONSULTA DE CLIENTES ATIVOS v0.0.1
 			- Consulta somente clientes ativos baseado no CPF informado e retorna o primeiro nome do mesmo.
 			- Baseado na API oficial do MK.
-
-			Obs: input é tipo number para melhorar a usabilidade em um telefone (abre direto o teclado numérico).
 	*/
 
 	/** @type {import('./$types').ActionData} */
@@ -26,7 +24,7 @@
 		<div class="flex flex-col items-center gap-7 w-full">
 			<fieldset class="flex flex-col gap-2 w-full">
 				<label for="cpf" class="w-full text-center leading-snug md:leading-normal md:text-left font-bold md:text-lg">CPF {'('}somente números, sem pontuação{')'}</label>
-				<input type="number" id="cpf" name="cpf" placeholder="Digite o CPF somente números..." class="w-full p-2 rounded-lg border border-black/20" required min="999" max="99999999999">
+				<input type="text" id="cpf" name="cpf" placeholder="Digite o CPF somente números..." class="w-full p-2 rounded-lg border border-black/20" required pattern="^[0-9]{'{11}'}$" maxlength="11">
 			</fieldset>
 			<button type="submit" class="btn btn-primary w-2/4 bg-azul-2 border-azul-3 hover:bg-azul-1 hover:border-azul-3 rounded-full">Conferir</button>
 		</div>

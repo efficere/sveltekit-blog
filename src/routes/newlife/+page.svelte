@@ -7,10 +7,12 @@
 
 	/** @type {import('./$types').ActionData} */
 	export let form;
+
+	console.log(form)
 </script>
 <svelte:head>
 	<title>Base de clientes - New Life Fibra</title>
-	<link rel="shortcut icon" href="/img/favicon.webp" type="image/x-icon">
+	<link rel="shortcut icon" href="/img/favicon-newlife.webp" type="image/x-icon">
 </svelte:head>
 <div class="container mx-auto px-5 md:p-0 gap-5 flex flex-col items-center justify-center min-h-[48rem] h-screen w-screen">
 	<form method="POST" class="flex flex-col gap-10 min-h-[40.9375rem] min-w-[20rem] w-full max-w-[32rem] shadow-xl shadow-black/10 rounded-3xl p-5 sm:p-10 items-center justify-center border-t-4 border-red-500">

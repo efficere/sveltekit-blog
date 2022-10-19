@@ -1,7 +1,7 @@
 <script>
 	/*
-		SISTEMA PARA CONSULTA DE CLIENTES ATIVOS v0.0.1
-			- Consulta somente clientes ativos baseado no CPF informado e retorna o primeiro nome do mesmo.
+		SISTEMA PARA CONSULTA DE CLIENTES ATIVOS v0.1.0
+			- Consulta somente clientes ativos baseado no CPF informado, buscando código e lista de contratos ativos e retorna o primeiro nome do cliente caso seja ativo.
 			- Baseado na API oficial do MK.
 	*/
 
